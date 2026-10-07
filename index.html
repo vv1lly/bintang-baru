@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toko Besi Bintang Baru | Besi & Material Bangunan</title>
+
+    <meta
+        name="description"
+        content="Toko Besi Bintang Baru menyediakan berbagai kebutuhan besi, baja, pipa, material bangunan dan perlengkapan lainnya."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="brand">
+
+            <div class="brand-icon">★</div>
+
+            <div>
+                <span class="brand-name">BINTANG BARU</span>
+                <span class="brand-subtitle">Toko Besi & Material</span>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home">Beranda</a>
+            <a href="#produk">Produk</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#lokasi">Lokasi</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Buka menu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                TOKO BESI & MATERIAL BANGUNAN
+            </div>
+
+            <h1>
+                Kebutuhan Besi & Material
+                <span>Lebih Mudah.</span>
+            </h1>
+
+            <p>
+                Selamat datang di Toko Besi Bintang Baru.
+                Temukan berbagai kebutuhan besi, material bangunan
+                dan perlengkapan proyek Anda.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#produk" class="btn btn-primary">
+                    Lihat Produk
+                </a>
+
+                <a
+                    href="https://wa.me/6282370001233"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline"
+                >
+                    Chat WhatsApp
+                </a>
+
+            </div>
+
+
+            <div class="hero-features">
+
+                <div>
+                    <strong>Lengkap</strong>
+                    <span>Berbagai kebutuhan material</span>
+                </div>
+
+                <div>
+                    <strong>Mudah</strong>
+                    <span>Tanya produk via WhatsApp</span>
+                </div>
+
+                <div>
+                    <strong>Terpercaya</strong>
+                    <span>Pelayanan untuk pelanggan</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-card-icon">★</div>
+
+            <h2>BINTANG BARU</h2>
+
+            <p>BESI • BAJA • MATERIAL</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>KATEGORI</span>
+
+            <h2>Cari Kebutuhan Anda</h2>
+
+            <p>
+                Pilih kategori produk yang sedang Anda cari.
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+            <button
+                class="category-card"
+                onclick="filterProduct('Besi')"
+            >
+                <div class="category-icon">▰</div>
+                <h3>Besi</h3>
+                <p>Lihat produk</p>
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterProduct('Pipa')"
+            >
+                <div class="category-icon">◯</div>
+                <h3>Pipa</h3>
+                <p>Lihat produk</p>
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterProduct('Atap')"
+            >
+                <div class="category-icon">⌂</div>
+                <h3>Atap</h3>
+                <p>Lihat produk</p>
+            </button>
+
+
+            <button
+                class="category-card"
+                onclick="filterProduct('Perkakas')"
+            >
+                <div class="category-icon">⚒</div>
+                <h3>Perkakas</h3>
+                <p>Lihat produk</p>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products" id="produk">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>PRODUK</span>
+
+            <h2>Katalog Produk</h2>
+
+            <p>
+                Cari produk yang Anda butuhkan.
+                Hubungi kami untuk harga dan ketersediaan stok terbaru.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchProduct"
+                placeholder="Cari produk..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div class="filters">
+
+            <button
+                class="filter active"
+                data-category="Semua"
+            >
+                Semua
+            </button>
+
+            <button
+                class="filter"
+                data-category="Besi"
+            >
+                Besi
+            </button>
+
+            <button
+                class="filter"
+                data-category="Pipa"
+            >
+                Pipa
+            </button>
+
+            <button
+                class="filter"
+                data-category="Atap"
+            >
+                Atap
+            </button>
+
+            <button
+                class="filter"
+                data-category="Perkakas"
+            >
+                Perkakas
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCT GRID -->
+
+        <div class="product-grid" id="productGrid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <article
+                class="product-card"
+                data-name="Besi Beton"
+                data-category="Besi"
+            >
+
+                <div class="product-image">
+                    <span>FOTO PRODUK</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Besi
+                    </span>
+
+                    <h3>Besi Beton</h3>
+
+                    <p>
+                        Tersedia berbagai ukuran.
+                        Hubungi kami untuk informasi produk.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Hubungi Kami</strong>
+
+                        <button onclick="orderProduct('Besi Beton')">
+                            Tanya Produk
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+
+            <article
+                class="product-card"
+                data-name="Besi Hollow"
+                data-category="Besi"
+            >
+
+                <div class="product-image">
+                    <span>FOTO PRODUK</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Besi
+                    </span>
+
+                    <h3>Besi Hollow</h3>
+
+                    <p>
+                        Tersedia berbagai ukuran.
+                        Hubungi kami untuk informasi produk.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Hubungi Kami</strong>
+
+                        <button onclick="orderProduct('Besi Hollow')">
+                            Tanya Produk
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+
+            <article
+                class="product-card"
+                data-name="Pipa"
+                data-category="Pipa"
+            >
+
+                <div class="product-image">
+                    <span>FOTO PRODUK</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Pipa
+                    </span>
+
+                    <h3>Pipa</h3>
+
+                    <p>
+                        Tersedia berbagai jenis dan ukuran pipa.
+                        Hubungi kami untuk informasi produk.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Hubungi Kami</strong>
+
+                        <button onclick="orderProduct('Pipa')">
+                            Tanya Produk
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+
+            <article
+                class="product-card"
+                data-name="Produk Atap"
+                data-category="Atap"
+            >
+
+                <div class="product-image">
+                    <span>FOTO PRODUK</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Atap
+                    </span>
+
+                    <h3>Produk Atap</h3>
+
+                    <p>
+                        Hubungi kami untuk mengetahui jenis,
+                        ukuran dan ketersediaan produk.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Hubungi Kami</strong>
+
+                        <button onclick="orderProduct('Produk Atap')">
+                            Tanya Produk
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 5 -->
+
+            <article
+                class="product-card"
+                data-name="Perkakas"
+                data-category="Perkakas"
+            >
+
+                <div class="product-image">
+                    <span>FOTO PRODUK</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Perkakas
+                    </span>
+
+                    <h3>Perkakas</h3>
+
+                    <p>
+                        Berbagai perlengkapan untuk kebutuhan
+                        pekerjaan dan proyek Anda.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Hubungi Kami</strong>
+
+                        <button onclick="orderProduct('Perkakas')">
+                            Tanya Produk
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 6 -->
+
+            <article
+                class="product-card"
+                data-name="Produk Lainnya"
+                data-category="Besi"
+            >
+
+                <div class="product-image">
+                    <span>FOTO PRODUK</span>
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        Produk
+                    </span>
+
+                    <h3>Produk Lainnya</h3>
+
+                    <p>
+                        Tidak menemukan barang yang Anda cari?
+                        Silakan tanyakan langsung kepada kami.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>Hubungi Kami</strong>
+
+                        <button onclick="orderProduct('Produk Lainnya')">
+                            Tanya Produk
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="container cta-container">
+
+        <div>
+
+            <span>BUTUH BANTUAN?</span>
+
+            <h2>
+                Tidak menemukan barang yang Anda cari?
+            </h2>
+
+            <p>
+                Tanyakan langsung kepada kami melalui WhatsApp.
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://wa.me/6282370001233"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-dark"
+        >
+            Hubungi Bintang Baru
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="tentang">
+
+    <div class="container about-container">
+
+        <div class="about-visual">
+
+            <div class="about-logo">
+                ★
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-label">
+                TENTANG KAMI
+            </span>
+
+            <h2>
+                Toko Besi Bintang Baru
+            </h2>
+
+            <p>
+                Toko Besi Bintang Baru menyediakan berbagai
+                kebutuhan besi, baja, pipa, material bangunan,
+                dan perlengkapan untuk kebutuhan proyek Anda.
+            </p>
+
+            <p>
+                Hubungi kami untuk mendapatkan informasi
+                mengenai produk, ukuran, harga, dan
+                ketersediaan stok terbaru.
+            </p>
+
+
+            <div class="about-points">
+
+                <div>✓ Produk Beragam</div>
+
+                <div>✓ Pelayanan Mudah</div>
+
+                <div>✓ Pemesanan WhatsApp</div>
+
+                <div>✓ Lokasi Mudah Ditemukan</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= LOCATION ================= -->
+
+<section class="location" id="lokasi">
+
+    <div class="container">
+
+        <div class="section-header">
+            <span>LOKASI</span>
+            <h2>Kunjungi Bintang Baru</h2>
+            <p>Datang langsung ke toko kami.</p>
+        </div>
+
+        <div class="location-grid">
+
+            <!-- GOOGLE MAP -->
+            <div class="map-box">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Toko+Besi+Bintang+Baru+Binjai&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                    title="Lokasi Toko Besi Bintang Baru">
+                </iframe>
+
+            </div>
+
+
+            <!-- INFORMASI TOKO -->
+            <div class="store-information">
+
+                <h3>Informasi Toko</h3>
+
+                <div class="store-info-item">
+                    <div class="info-icon">⌖</div>
+
+                    <div>
+                        <span>Lokasi</span>
+                        <strong>
+                            Toko Besi Bintang Baru<br>
+                            Binjai
+                        </strong>
+                    </div>
+                </div>
+
+
+                <div class="store-info-item">
+                    <div class="info-icon">◉</div>
+
+                    <div>
+                        <span>WhatsApp</span>
+                        <strong>0823 7000 1233</strong>
+                    </div>
+                </div>
+
+
+                <div class="store-info-item">
+                    <div class="info-icon">☎</div>
+
+                    <div>
+                        <span>Telepon</span>
+                        <strong>0823 7000 1233</strong>
+                    </div>
+                </div>
+
+
+                <div class="store-info-item">
+                    <div class="info-icon">✉</div>
+
+                    <div>
+                        <span>Email</span>
+                        <strong>bintangbaru.binjai49@gmail.com</strong>
+                    </div>
+                </div>
+
+
+                <div class="store-info-item">
+                    <div class="info-icon">◷</div>
+
+                    <div>
+                        <span>Jam Operasional</span>
+                        <strong>
+                            Senin - Sabtu<br>
+                            08:00 - 18:00
+                        </strong>
+                    </div>
+                </div>
+
+
+                <a
+                    href="https://maps.app.goo.gl/PU1NQVgvSEwX7EXJ8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="direction-button"
+                >
+                    Petunjuk Arah
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="kontak">
+
+    <div class="container">
+
+        <div class="section-header light">
+
+            <span>KONTAK</span>
+
+            <h2>Hubungi Kami</h2>
+
+            <p>
+                Ada pertanyaan mengenai produk?
+                Hubungi kami melalui kontak berikut.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/6282370001233"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card"
+            >
+
+                <div>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="28"
+                        height="28"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.371-.011-.57-.011-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.875 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.693.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.89-9.884 2.64 0 5.122 1.029 6.988 2.895a9.825 9.825 0 012.9 6.986c-.002 5.45-4.437 9.884-9.884 9.884"/>
+                    </svg>
+
+                </div>
+
+                <h3>WhatsApp</h3>
+
+                <p>
+                    0823 7000 1233
+                </p>
+
+            </a>
+
+
+
+            <!-- TELEPHONE -->
+
+            <a
+                href="tel:+6282370001233"
+                class="contact-card"
+            >
+
+                <div>☎</div>
+
+                <h3>Telepon</h3>
+
+                <p>
+                    0823 7000 1233
+                </p>
+
+            </a>
+
+
+
+            <!-- EMAIL -->
+
+            <a
+                href="mailto:bintangbaru.binjai49@gmail.com"
+                class="contact-card"
+            >
+
+                <div>✉</div>
+
+                <h3>Email</h3>
+
+                <p>
+                    bintangbaru.binjai49@gmail.com
+                </p>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-container">
+
+        <div>
+
+            <div class="footer-brand">
+                ★ BINTANG BARU
+            </div>
+
+            <p>
+                Toko Besi & Material Bangunan
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">Beranda</a>
+
+            <a href="#produk">Produk</a>
+
+            <a href="#tentang">Tentang</a>
+
+            <a href="#lokasi">Lokasi</a>
+
+            <a href="#kontak">Kontak</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        Toko Besi Bintang Baru.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= WHATSAPP FLOATING BUTTON ================= -->
+
+<a
+    href="https://wa.me/6282370001233"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp"
+    title="Chat WhatsApp"
+    aria-label="Chat melalui WhatsApp"
+>
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+    >
+
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.371-.011-.57-.011-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.875 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.693.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.89-9.884 2.64 0 5.122 1.029 6.988 2.895a9.825 9.825 0 012.9 6.986c-.002 5.45-4.437 9.884-9.884 9.884"/>
+
+    </svg>
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
